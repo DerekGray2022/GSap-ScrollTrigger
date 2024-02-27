@@ -23,16 +23,13 @@
 .square1
 {
     width: 150px;
-    height: 150px;
+    height: 20vh;
     background-color: fuchsia;
 }
 
-.square2
+.red
 {
-    width: 150px;
-    height: 150px;
-    margin-top: 300px;
-    background-color: blue;
+    background-color: red;
 }
 
 
