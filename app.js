@@ -6,11 +6,11 @@ gsap.to('.square1', {
     duration: 8,
     scrollTrigger: {
         trigger: '.square1',
-        start: "top 60%",
-        end: "top 40%",
-        //      none | play | restart | reset | reverse | resume | pause | complete
-        toggleActions: "restart pause resume complete",
-        //      onEnter | onLeave | onEnterBack | onLeaveBack
+        start: "top 80%",
+        end: "top 30%",
+        // scrub: true,
+        scrub: 4,
+        toggleActions: "restart none none none",
         markers: {
             startColor: 'purple',
             endColor: 'fuchsia',
