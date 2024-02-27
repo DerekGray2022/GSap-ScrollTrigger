@@ -1,23 +1,34 @@
 gsap.registerPlugin(ScrollTrigger);
 
+// ScrollTrigger.create({
+//     trigger: ".box",
+//     start: "top 80%",
+//     end: "top 50%",
+//     markers: true,
+//     toggleClass: "box-red"
+// });
 
-// gsap.to(".box", { x: 250, duration: 5 });
-// gsap.to(".box", { y: 250, duration: 3, delay: 2 });
-// gsap.to(".box", { x: 0, y: 0, duration: 2, delay: 5 });
-
-const tl = gsap.timeline({
-    scrollTrigger: {
-        trigger: ".box",
-        markers: true,
-        start: "top 80%",
-        end: "top 30%",
-        scrub: 1
-    }
+ScrollTrigger.create({
+    trigger: ".box",
+    start: "top 80%",
+    end: "top 50%",
+    markers: true,
+    // onUpdate: (self) => console.log(self),
+    onUpdate: ({progress, direction, isActive}) => console.log(progress, direction, isActive)
+    // onEnter: () => console.log("ENTER!"),
+    // onLeave: () => console.log("LEAVE!"),
+    // onEnterBack: () => console.log("ENTER BACK!"),
+    // onLeaveBack: () => console.log("LEAVE BACK!"),
 });
 
-tl.to(".box", { x: 250, duration: 5 })
-    .to(".box", { y: 250, duration: 2 })
-    .to(".box", { x: 0, y: 0, duration: 2 })
+
+// //      NAV BAR
+// ScrollTrigger.create({
+//     trigger: ".panel",
+//     start: "top 10%",
+//     toggleClass: { targets: "nav", className: "nav-active" },
+//     // markers: true
+// });
 
 
 
