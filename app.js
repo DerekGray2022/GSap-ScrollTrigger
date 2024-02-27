@@ -1,28 +1,24 @@
 gsap.registerPlugin(ScrollTrigger);
-const square1 = document.querySelector(".square1");
 
-gsap.to('.square1', {
-    // x: 200,
-    duration: 8,
+
+// gsap.to(".box", { x: 250, duration: 5 });
+// gsap.to(".box", { y: 250, duration: 3, delay: 2 });
+// gsap.to(".box", { x: 0, y: 0, duration: 2, delay: 5 });
+
+const tl = gsap.timeline({
     scrollTrigger: {
-        trigger: '.square2',
+        trigger: ".box",
+        markers: true,
         start: "top 80%",
-        end: "top 40%",
-        // scrub: true,
-        scrub: 4,
-        // pin: true,
-        pin: ".square1",
-        // pinSpacing: false,
-        pinSpacing: true,
-        toggleActions: "restart none none none",
-        markers: {
-            startColor: 'purple',
-            endColor: 'fuchsia',
-            fontSize: '1.2rem',
-            indent: 30
-        },
+        end: "top 30%",
+        scrub: 1
     }
 });
+
+tl.to(".box", { x: 250, duration: 5 })
+    .to(".box", { y: 250, duration: 2 })
+    .to(".box", { x: 0, y: 0, duration: 2 })
+
 
 
 
